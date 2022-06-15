@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Show Commands</title>
+</head>
+<body>
+<div class="add_text">
+        <p>Show Command:<br>
+        <a href="/" class="add_text">Добавити дані</a>
+</div>
+
+<div class="output_msg">
+    {% for key in data %}
+        <p>
+        {% set a = key['nickname'] %}
+        {% set b = key['text'] %}
+        {% set c = key['id'] %}
+        {% set d = key['email'] %}
+        {% set e = key['first_name'] %}
+        {% set f = key['last_name'] %}
+        {% set g = key['password'] %}
+            <b>{{a}} <br></b>
+            <b>{{b}} <br></b>
+            <b>{{c}} <br></b>
+            <b>{{d}} <br></b>
+            <b>{{e}} <br></b>
+            <b>{{f}} <br></b>
+        {{g}} <br>
+        </p>
+            <a href="/delete/{{ c }}/del" class="btn danger">Видалити дані</a>
+    <br>
+            <a href="/update/{{ c }}/up" class="btn success">Оновити дані</a>
+    {% endfor %}
+</div>
+</body>
+</html>

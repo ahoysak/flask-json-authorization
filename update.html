@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div class="delete_user">
+    <form action="/update/{{ user['id'] }}/save" name="main_form" method="post">
+        <p>Text №1:<br>
+            <input value="{{user['nickname']}}" type=text  name="nickname"></p>
+        <p>Text №2<br>
+            <textarea name="text">{{user['text']}}</textarea></p>
+        <p>Email</p>
+            <textarea name="email">{{user['email']}}</textarea></p>
+        <p>First Name</p>
+            <textarea name="first_name">{{user['first_name']}}</textarea></p>
+        <p>Last Name</p>
+            <textarea name="last_name">{{user['last_name']}}</textarea></p>
+        <p>Password</p>
+            <textarea name="password">{{user['password']}}</textarea></p>
+        <p><input  type="submit" value="Відправити"></p>
+    </form>
+    <a href="/about" class="add_text">Перейти до даних</a>
+</div>
+</body>
+</html>
